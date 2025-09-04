@@ -270,15 +270,16 @@ public with sharing class FlowControlLoopsCollections {
      * @return A List of integers from 1 to 'n'.
      */
     public static List<Integer> createIntegerList(Integer n) {
-        // Create a new list of integers 
-
-        /*
-        for() {
-            //add integer to the list
+        if (n == null || n < 1) {
+            return new List<Integer>();
         }
-        */ 
-
-        return null; // Replace null with the variable you used to store the result
+        // Create a new list of integers
+        List<Integer> expectedList = new List<Integer>();
+        for(Integer i = 0; i < n; i++) {
+            //add integer to the list
+            expectedList.add(i + 1);
+        }
+        return expectedList;
     }
 
     /**
